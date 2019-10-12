@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Crystals Collecter Game</title>
     <script type="javascript" src="./assets/javascript/game.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <div class="containter-fluid">
+            <div class="row" id="title">CrystalsCollector!</div>
+            <div class="row" id="rules"></div>
+            <div class="row" id="randomTotal"></div>
+            <div class="row" id="win/loss">
+                <div class="row" id="winScore"></div>
+                <div class="row" id="lossScore"></div>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary">ruby</button>
+                    <button type="button" class="btn btn-secondary">diamond</button>
+                    <button type="button" class="btn btn-secondary">yellow</button>
+                    <button type="button" class="btn btn-secondary">emerald</button>
+            </div>
+            <div class="row" id="totalScoreText">Your total score is:</div>
+            <div class="row" id="totalScore"></div>
+    </div>
 </body>
 </html>

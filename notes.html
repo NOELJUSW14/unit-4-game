@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery Notes</title>
+    <style>
+        .fancy{
+            font-size: 100px;
+            color: green
+        }
+        </style>
+    
+</head>
+<body>
+    <div id="empty-div"></div>
+    <script type="text/javascript">
+
+        // DOM = 'Document Object Manipulation'
+        //use jquery to manipulate objects in DOM
+        // ex. 
+        var targetDiv = document.getElementById('empty-div')
+        targetDiv.textContent = 'Hello Friends!'
+        
+        //this will place text content to the div
+        
+        //to create new div
+        //ex.
+        var newDiv = document.createElement('div');
+        newDiv.textContent = 'A pleasure to meet you!'
+        
+        //to combine or add text, if not it will overwrite the old command
+        targetDiv.appendChild(newDiv)
+        
+        //set attributes to divs
+        //We use this to manipulate and create CSS
+        
+        newDiv.setAttribute("class", "fancy");
+        
+        
+        </script>
+        
+</body>
+</html>
