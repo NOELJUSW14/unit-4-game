@@ -5,30 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="img-styleshet" href="assets/images/">
     <title>Crystals Collecter Game</title>
-    <script type="javascript" src="./assets/javascript/game.js"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+    <style>
+        .panel-heading{
+            background-color: goldenrod;
+            border-color:forestgreen;
+            border-width: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="containter-fluid">
-            <div class="row" id="title">CrystalsCollector!</div>
-            <div class="row" id="rules"></div>
-            <div class="row" id="randomTotal"></div>
+            <div class="jumbotron text-center" style="background-color: green" id="title"><h1>CrystalsCollector!</h1></div>
+            <div class="row" id="rules">
+                <div class="col-12">
+                    <div class="panel-heading text-center"><h3>Rules of the Game</h3></div>
+                    <div class="panel-body text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam unde tempore, cumque, corrupti ducimus officiis hic porro mollitia maiores placeat voluptatibus voluptatem cum aut? Nemo molestiae pariatur adipisci expedita vero.</div>
+                </div>        
+            </div>
             <div class="row" id="win/loss">
-                <div class="row" id="winScore"></div>
-                <div class="row" id="lossScore"></div>
+                <div class="col-lg-4">
+                    <div class="panel panel-primary">
+                            <div class="panel-heading text-center" id="winScore"><h3>Wins:</h3>
+                                <div class="row text-center">0</div>
+                            </div>
+                    </div>  
+                </div>
+                <div class="col-lg-4">
+                        <div class="panel panel-primary">
+                                <div class="panel-heading text-center" id="gemHeader"><h3>Gems</h3>
+                                    <div class="panel-body text-center">
+                                        <button class="btn btn-default" id="red">
+                                                <img src="/assets/images/reality-stone.png" alt="red" width="50px" >
+                                        </button>
+                                        <button class="btn btn-default" id="blue">
+                                                <img src="/assets/images/space-stone.jpg" alt="blue" width="50px">
+                                        </button>
+                                        <button class="btn btn-default" id="yellow">
+                                                <img src="/assets/images/soul-stone.png" alt="yellow" width="50px">
+                                        </button>
+                                        <button class="btn btn-default" id="green">
+                                                <img src="/assets/images/time-stone.png" alt="green" width="50px">
+                                        </button>
+                                    </div>
+                                </div>  
+                            </div>                  
+                    </div>
+                <div class="col-lg-4">
+                    <div class="panel panel-primary">
+                            <div class="panel-heading text-center" id="lossScore"><h3>Loss:</h3></div>
+                            <div class="panel-body text center">
+                                    <div class="row text-center"> 0 </div>
+                            </div>
+                    </div>
+                </div>
             </div>
-            <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary">ruby</button>
-                    <button type="button" class="btn btn-secondary">diamond</button>
-                    <button type="button" class="btn btn-secondary">yellow</button>
-                    <button type="button" class="btn btn-secondary">emerald</button>
+            <div class="row" id="score">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading text center" id="score"><h3>Score you must reach!</h3></div>
+                        <div class="row" id="randomTotalText"></div>
+                        <div class="row" id="randomTotal">250</div>
+                    </div>       
             </div>
+            
             <div class="row" id="totalScoreText">Your total score is:</div>
-            <div class="row" id="totalScore"></div>
+            <div class="row" id="totalScore">00</div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script type="javascript" src="./assets/javascript/game.js"></script>
 </body>
 </html>
