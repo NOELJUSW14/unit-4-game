@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" >
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="img-styleshet" href="assets/images/">
@@ -13,6 +13,24 @@
             border-color:forestgreen;
             border-width: 10px;
         }
+        #gemBody{
+            background-color: black
+        }
+        .img{
+            width: 120px;
+            height: 150px;
+            padding: 0px;
+            margin: 5px;
+        }
+        #img-left{
+            float: left;
+        }
+        #img-right{
+            float: right;
+        }
+        .col-lg-4{
+            float: left;
+        }
     </style>
 </head>
 <body>
@@ -21,56 +39,86 @@
             <div class="row" id="rules">
                 <div class="col-12">
                     <div class="panel-heading text-center"><h3>Rules of the Game</h3></div>
-                    <div class="panel-body text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam unde tempore, cumque, corrupti ducimus officiis hic porro mollitia maiores placeat voluptatibus voluptatem cum aut? Nemo molestiae pariatur adipisci expedita vero.</div>
+                    <div class="panel-body text-center"><p><small>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam unde tempore, cumque, corrupti ducimus officiis hic porro mollitia maiores placeat voluptatibus voluptatem cum aut? Nemo molestiae pariatur adipisci expedita vero.</small></p></div>
                 </div>        
             </div>
             <div class="row" id="win/loss">
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                     <div class="panel panel-primary">
-                            <div class="panel-heading text-center" id="winScore"><h3>Wins:</h3>
-                                <div class="row text-center">0</div>
+                            <div class="panel-heading text-center" id="winScore">
+                                    <h3 class="panel-title text-center">Wins:</h3>
+                            </div>
+                            <div class="panel-body">
+                                <h3 class="text-center">0</h3>
                             </div>
                     </div>  
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-8">
                         <div class="panel panel-primary">
                                 <div class="panel-heading text-center" id="gemHeader"><h3>Gems</h3>
-                                    <div class="panel-body text-center">
-                                        <button class="btn btn-default" id="red">
-                                                <img src="/assets/images/reality-stone.png" alt="red" width="50px" >
-                                        </button>
-                                        <button class="btn btn-default" id="blue">
-                                                <img src="/assets/images/space-stone.jpg" alt="blue" width="50px">
-                                        </button>
-                                        <button class="btn btn-default" id="yellow">
-                                                <img src="/assets/images/soul-stone.png" alt="yellow" width="50px">
-                                        </button>
-                                        <button class="btn btn-default" id="green">
-                                                <img src="/assets/images/time-stone.png" alt="green" width="50px">
-                                        </button>
+                                    <div class="panel-body text-center" id="gemBody">
+                                        <figure class="figure img">
+                                                <img src="assets/images/james-bousema-gauntlet-final-web.jpg" class="figure-img img-fluid rounded" width="120px" height="200px" id="img-left">
+                                        </figure>
+                                        <figure class="figure img" id="red">
+                                                <img src="assets/images/reality-stone.png" alt="red" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                                <figcaption class="figure-caption text-center">Reality Stone</figcaption>
+                                        </figure>
+                                        <figure class="figure img" id="blue">
+                                                <img src="assets/images/space-stone.jpg" alt="blue" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                                <figcaption class="figure-caption text-center">Space Stone</figcaption>
+                                        </figure>
+                                        <figure class="figure img" id="yellow">
+                                                <img src="assets/images/soul-stone.png" alt="yellow" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                                <figcaption class="figure-caption text-center">Soul Stone</figcaption>
+                                        </figure>
+                                        <figure class="figure img" id="green">
+                                                <img src="assets/images/time-stone.png" alt="green" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                                <figcaption class="figure-caption text-center">Time Stone</figcaption>
+                                        </figure>
+                                        <figure class="figure img" id="purple">
+                                                <img src="assets/images/infinity-stone-power-stone.png" alt="purple" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                                <figcaption class="figure-caption text-center">Power Stone</figcaption>
+                                        </figure>
+                                        <figure class="figure img">
+                                                <img src="assets/images/james-bousema-gauntlet-final-web.jpg" class="figure-img img-fluid rounded" width="120px" height="200px" id="img-right">
+                                        </figure>
+                                    
                                     </div>
                                 </div>  
                             </div>                  
                     </div>
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                     <div class="panel panel-primary">
-                            <div class="panel-heading text-center" id="lossScore"><h3>Loss:</h3></div>
-                            <div class="panel-body text center">
-                                    <div class="row text-center"> 0 </div>
+                            <div class="panel-heading" id="lossScore"><h3 class="panel-title text-center">Loss:</h3></div>
+                            <div class="panel-body">
+                                <h3 class="text-center">0</h3>
                             </div>
                     </div>
                 </div>
             </div>
-            <div class="row" id="score">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text center" id="score"><h3>Score you must reach!</h3></div>
-                        <div class="row" id="randomTotalText"></div>
-                        <div class="row" id="randomTotal">250</div>
-                    </div>       
+            <div class="row">
+                <div class="col-lg-2 offset-lg-2"></div>
+                <div class="col-lg-4">
+                        <div class="panel panel-primary">
+                                <div class="panel-heading text-center" id="score"><h3 class="panel-title text-center">Score you must reach!</h3></div>
+                                <div class="panel-body">
+                                    <h3 class="text-center">250</h3>
+                                </div>
+                            </div>    
+                </div> 
+                <div class="col-lg-4">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading text-center" id="totalScoreText"><h3 class="panel-title text-center">Your total score is:</h3></div>
+                            <div class="panel-body">
+                                <h3 class="text-center">00</h3>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-lg-2 offset-lg-2"></div>           
             </div>
             
-            <div class="row" id="totalScoreText">Your total score is:</div>
-            <div class="row" id="totalScore">00</div>
+            
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
