@@ -2,50 +2,105 @@
 
 //value of crystals each round
 var gems = {
-    ruby: {
+    red: {
         value : 0,
         name : `realityStone`
     },
-    diamond : {
+    blue : {
         value : 0,
         name : `spaceStone`
     }, 
-    emerald : {
+    green : {
         value : 0,
         name : `timeStone`
     }, 
     yellow : {
         value : 0,
         name : `mindStone`
+    },
+    purple: {
+        value : 0,
+        name : `powerStone`
     }
 }
     
 
 //current and target score
-playerScore = 0;
-givenTotalScore = 0;
+var currentScore = 0;
+var targetScore= 0;
 
-randomTotal = Math.floor(Math.random() * (120 - 19 + 1)) + 1; 
-
+var randomTotal = Math.floor(Math.random() * (120 - 19 + 1)) + 1; 
+var randomGemTotal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 //wins and losses
 var winTotal = 0;
 var lossTotal = 0;
 
 //functions 
 
-randomGemTotal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+var getRandom = function(min,max){
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-valueCreator = function(){
+var startgame = function(){
+    
+    //reset score
+    playerScore = 0;
+    //set target score
+    targetScore = getRandom(19,120);
+
+    //set diff value for crystal
+    gems.red.value = getRandom(1,12)
+    gems.blue.value = getRandom(1,12)
+    gems.green.value = getRandom(1,12)
+    gems.yellow.value = getRandom(1,12)
+
+    $("#playerScore").html(currentScore);
+    $("#targetscore").html(targetScore);
+    //change html to show changes
+$("yourScore").html(currentScore);
 
 }
-$('#blue').click(function{
-    alert(welcome)
-})
+var addValues = function(gems){
+    currentScore = currentScore + gems.value;
 
+}
+var scoreCheck = function(){
+    if(currentScore > targetScore){
+        alert("Loser!!!")
+        lossTotal++
+
+        $("#lossTotal").html(lossTotal());
+        //reset
+        startgame()
+    }
+    else if(currentScore == targetScore){
+        alert("You got it!!!")
+        winTotal++
+        $("#winTotal").html(winTotal());
+        
+        //reset
+        startgame()
+    }
+}
 //main process
+startgame()
+
+$(`.red`).onclick(function() {
+    alert(`testing`)
+});
+$(`.blue`).onclick(function(){
+    alert(`testing`)
+});
+$(`.yellow`).onclick(function() {
+    alert(`testing`)
+});
+$(`.green`).onclick(function(){
+    alert(`testing`)
+});
+
+
 
 //games starts
-alert('Game on')
 
 //player continues until displayed number is met or player goes over
 //player wins if players total is equal to displayed number

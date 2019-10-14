@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" >
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="javascript" src="assets/javascript/game.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="img-styleshet" href="assets/images/">
     <title>Crystals Collecter Game</title>
@@ -57,33 +59,16 @@
                         <div class="panel panel-primary">
                                 <div class="panel-heading text-center" id="gemHeader"><h3>Gems</h3>
                                     <div class="panel-body text-center" id="gemBody">
-                                        <figure class="figure img">
-                                                <img src="assets/images/james-bousema-gauntlet-final-web.jpg" class="figure-img img-fluid rounded" width="120px" height="200px" id="img-left">
-                                        </figure>
-                                        <figure class="figure img" id="red">
-                                                <img src="assets/images/reality-stone.png" alt="red" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-                                                <figcaption class="figure-caption text-center">Reality Stone</figcaption>
-                                        </figure>
-                                        <figure class="figure img" id="blue">
-                                                <img src="assets/images/space-stone.jpg" alt="blue" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-                                                <figcaption class="figure-caption text-center">Space Stone</figcaption>
-                                        </figure>
-                                        <figure class="figure img" id="yellow">
-                                                <img src="assets/images/soul-stone.png" alt="yellow" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-                                                <figcaption class="figure-caption text-center">Soul Stone</figcaption>
-                                        </figure>
-                                        <figure class="figure img" id="green">
-                                                <img src="assets/images/time-stone.png" alt="green" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-                                                <figcaption class="figure-caption text-center">Time Stone</figcaption>
-                                        </figure>
-                                        <figure class="figure img" id="purple">
-                                                <img src="assets/images/infinity-stone-power-stone.png" alt="purple" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-                                                <figcaption class="figure-caption text-center">Power Stone</figcaption>
-                                        </figure>
-                                        <figure class="figure img">
-                                                <img src="assets/images/james-bousema-gauntlet-final-web.jpg" class="figure-img img-fluid rounded" width="120px" height="200px" id="img-right">
-                                        </figure>
                                     
+                                         <img src="assets/images/james-bousema-gauntlet-final-web.jpg" class="img" id="img-left">
+                                        
+                                        <img  src="assets/images/red.png" id="red" class="img">
+                                        <img src="assets/images/yellow.png" id="yellow" class="img">
+                                        <img  src="assets/images/blue.png" id="blue" class="img">
+                                        <img src="assets/images/green.png" id="green" class="img">
+                                       
+                                         <img src="assets/images/james-bousema-gauntlet-final-web.jpg" class="img" id="img-right">
+                                        
                                     </div>
                                 </div>  
                             </div>                  
@@ -101,17 +86,17 @@
                 <div class="col-lg-2 offset-lg-2"></div>
                 <div class="col-lg-4">
                         <div class="panel panel-primary">
-                                <div class="panel-heading text-center" id="score"><h3 class="panel-title text-center">Score you must reach!</h3></div>
+                                <div class="panel-heading text-center"><h3 class="panel-title text-center">Score you must reach!</h3></div>
                                 <div class="panel-body">
-                                    <h3 class="text-center">250</h3>
+                                    <h3 class="text-center" id="targetScore">250</h3>
                                 </div>
                             </div>    
                 </div> 
                 <div class="col-lg-4">
                         <div class="panel panel-primary">
-                            <div class="panel-heading text-center" id="totalScoreText"><h3 class="panel-title text-center">Your total score is:</h3></div>
+                            <div class="panel-heading text-center" ><h3 class="panel-title text-center">Your total score is:</h3></div>
                             <div class="panel-body">
-                                <h3 class="text-center">00</h3>
+                                <h3 class="text-center" id="playerScore">0</h3>
                             </div>
                         </div>
                     </div>
@@ -120,8 +105,5 @@
             
             
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
-    <script type="javascript" src="./assets/javascript/game.js"></script>
 </body>
 </html>
